@@ -1,0 +1,16 @@
+#ifndef __VECTOR_H_
+#define __VECTOR_H_
+
+typedef struct _vector{
+	void** buffer;
+	unsigned int size;
+	unsigned int allocSize;
+} vector_t;
+
+void vector_init(vector_t *v);
+void vector_destroy(vector_t *v);
+void vector_append(vector_t *v, void *item);
+void *vector_remove(vector_t *v);
+unsigned int vector_size(vector_t* v);
+
+#endif	
